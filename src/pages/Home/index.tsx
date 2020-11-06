@@ -21,7 +21,6 @@ const Home: React.FC = () => {
     const pokemons = await getPokemons();
     setIsLoading(true);
     const promises: any = [];
-
     for (let pokemon of pokemons.results) {
       const url = pokemon.url;
       const promise = await axios(url);
